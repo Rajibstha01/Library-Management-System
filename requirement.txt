@@ -1,0 +1,37 @@
+Library Management System
+Book List Page
+Show all books in a simple table or grid.
+Display book title, author, genre, and stock quantity.
+Low Stock Alert: Highlight books in red when stock falls below 5 copies.
+Search & Filter: Add a search bar to find books by title and a dropdown to filter by genre.
+View Book Page
+Show all details for a single book.
+Display title, author, genre, stock quantity, and book cover image.
+Book Add & Edit Page
+Form fields:
+Title
+Author (dropdown)
+Genre (dropdown)
+Stock Quantity
+Cover Image Upload: Users must be able to upload a real image file from their computer (no text URLs).
+Author List Page
+Show a list of all authors.
+Display:
+Author Name
+Biography (optional)
+Author Add & Edit Page
+Form fields:
+Author Name
+Biography
+Genre List Page
+Show a list of all genres.
+Genre Add & Edit Page
+Form fields:
+Genre Name
+Admin Login & Security
+Login Form: A simple login page to access the system.
+Route Protection: If a user is not logged in, they cannot view or modify any library data and must be redirected to the login page.
+Secure Passwords: User passwords must be safely hashed in the database (never saved as plain text).
+Validation
+Prevent bad data: Stop users from entering negative stock quantities or leaving required fields blank.
+Show a clear error message if validation fails.
