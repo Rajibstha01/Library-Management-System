@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+}
+nav{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top:10px ;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1, h2, h3, .brand {
+  font-family: 'Playfair Display', serif;
+}
+body, p, a {
+  font-family: 'Lora', serif;
+}
+nav a{
+    padding: 10px;
+    text-decoration: none;
+    color:#1C1A14;
+    font-size: 20px;
+}
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav img{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+#searchbar{
+    border: #1C1A14 solid;
+    border-radius: 100px;
+    margin: 20px;
+    padding: 10px;
+    width: 230px;
+}
+.nav-link.active {
+    color: #C9A84C;
+    border-bottom: 2px solid #C9A84C;
+    font-weight: 600;
+}
+#navbutton{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    border-color: #1C1A14;
+    background-color: #F2EDE4;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#navbutton:hover{
+    color: #F2EDE4;
+    border-color: #F2EDE4;
+    background-color:#1C1A14;
+    cursor: pointer;
+    font-size: 20px;
+}
+body{
+    background-color: #F2EDE4;
+}
+
+.Background{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    font-size: 40px;
+}
+.subBackground{
+    background-color:#E0D5C5;
+    padding-top: 40px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 60px;
+    border-radius: 20px;
+    box-shadow: 10px 3px 1px 0px #1C1A14;
+}
+p{
+    text-align: center;
+}
+.textadmin{
+    display: flex;
+    flex-flow:column;
+}
+.textadmin a{
+    text-decoration: none;
+    color: inherit;
+}
+#Username{
+    border-color: #1C1A14;
+    border-radius: 10px;
+    padding: 10px;
+}
+#Password{
+    border-color: #1C1A14;
+    border-radius: 10px;
+    padding: 10px;
+}
+span{
+    font-size: 20px;
+}
+
+.textadmin button{
+    padding: 10px;
+    font-size:20px;
+    border-radius: 20px;
+    color:#1C1A14;
+}
+
+.textadmin button:hover{
+    color: #E0D5C5;
+    background-color:#1C1A14;
+}
+
+
+
+#mainuppertext{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#mainuppertext span{
+    margin: 50px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+#navforviewall{
+    display: flex;
+    justify-content: space-around;
+}
+#navforviewall span{
+    padding: 13px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#navforviewall a{
+    color: #C9A84C;
+}
+
+#cardholder{
+    display: flex;
+    justify-content: center;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2rem;
+    width: 1000px;
+    height: 800px;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.card{
+    width: 200px;
+    height: 350px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.coverpage{
+    height: 300px;
+}
+.coverpage img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.titles{
+    height: 100px;
+    background-color: white;
+}
+
+
