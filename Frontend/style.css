@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2EDE4;
+    font-family: 'Lora', serif;
+}
+
+/* ── NAV ── */
+nav {
+    padding: 0 30px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    border-bottom: 1px solid #e0d8cc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#home a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1C1A14;
+    border-bottom: none !important;
+}
+
+#home img {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+}
+
+nav > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+nav a {
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #1C1A14;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #C9A84C;
+}
+
+.nav-link.active {
+    color: #C9A84C;
+    border-bottom: 2px solid #C9A84C;
+    font-weight: 600;
+}
+
+#searchbar {
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    padding: 8px 16px;
+    width: 190px;
+    font-size: 15px;
+    background: #F2EDE4;
+    outline: none;
+    margin-right: 8px;
+    font-family: 'Lora', serif;
+}
+
+#navbutton {
+    padding: 9px 22px;
+    margin-left: 6px;
+    border: 1px solid #1C1A14;
+    background-color: #F2EDE4;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    transition: all 0.2s;
+}
+
+#navbutton:hover {
+    color: #F2EDE4;
+    background-color: #1C1A14;
+}
+
+/* ── HERO ── */
+#mainuppertext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+}
+
+#mainuppertext img {
+    width: 70px !important;
+    height: 70px !important;
+    padding: 0 !important;
+    margin-bottom: 1rem;
+    opacity: 0.85;
+}
+
+#mainuppertext h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1C1A14;
+    margin-bottom: 0.6rem;
+}
+
+#mainuppertext p {
+    font-size: 1.05rem;
+    color: #777;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 500px;
+}
+/* ── FEATURED HEADER ── */
+#navforviewall {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0 0.75rem;   
+    max-width: 900px;             
+    margin: 0 auto;               
+}
+#navforviewall span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1C1A14;
+}
+
+#navforviewall a {
+    color: #C9A84C;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0;
+    border: none !important;
+}
+
+/* ── CARD GRID ── */
+#cardholder {
+    padding: 0.5rem 2.5rem 4rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 900px;        
+    margin: 0 auto;       
+}
+
+/* ── CARD ── */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e8e0d0;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+    max-width: 200px;      
+    margin: 0 auto;          
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+/* cover — portrait book shape */
+.coverpage {
+    position: relative;
+    width: 100%;
+    height: 280px;       
+    overflow: hidden;
+}
+
+.coverpage img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.titles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.7rem 0.85rem;
+    background: rgba(242, 237, 228, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+.book-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1C1A14;
+    text-align: left;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bookauther {
+    font-size: 0.85rem;
+    color: #555;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.genre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.book-genre {
+    border: 1px solid #C9A84C;
+    background-color: rgba(201, 168, 76, 0.18);
+    border-radius: 20px;
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    color: #7a5c1e;
+}
+
+/* ── ADMIN LOGIN ── */
+.Background {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* left decorative panel */
+.login-left {
+    flex: 1;
+    background: linear-gradient(160deg, #1C1A14 0%, #2e2a1e 60%, #3d3420 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.login-left-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.login-logo {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 0 !important;
+    filter: invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9);
+    margin-bottom: 1.25rem;
+    opacity: 0.9;
+}
+
+.login-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #C9A84C;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.login-tagline {
+    font-family: 'Lora', serif;
+    font-size: 1.15rem;
+    color: #c8bfa8;
+    line-height: 1.7;
+    max-width: 240px;
+}
+
+.login-decoration {
+    display: flex;
+    gap: 10px;
+    margin-top: 2.5rem;
+}
+
+.login-decoration span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #C9A84C;
+    opacity: 0.5;
+}
+
+.login-decoration span:nth-child(2) {
+    opacity: 1;
+    width: 28px;
+    border-radius: 4px;
+}
+
+/* right form panel */
+.login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: #F2EDE4;
+}
+
+.textadmin {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.login-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1C1A14;
+    margin-bottom: 0.4rem;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.1rem;
+}
+
+.input-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1C1A14;
+    font-family: 'Lora', serif;
+}
+
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrap input {
+    width: 100%;
+    padding: 13px 14px 13px 40px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    background: #fff;
+    color: #1C1A14;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrap input:focus {
+    border-color: #C9A84C;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.05rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    background: #1C1A14;
+    color: #C9A84C;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.login-btn:hover {
+    background: #2e2a1e;
+    transform: translateY(-1px);
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #C9A84C;
+}
+
+/* ── FOOTER ── */
+footer {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    padding: 3rem 4rem;
+    border-top: 1px solid #e0d8cc;
+    margin-top: 3rem;
+}
+
+footer h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: #1C1A14;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+#Discover {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#Discover a {
+    text-decoration: none;
+    color: #C9A84C;
+    font-size: 14px;
+    padding: 0;
+    border: none !important;
+}
+
+#Discover a:hover,
+#about a:hover {
+    text-decoration: underline;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#about a {
+    text-decoration: none;
+    color: #C9A84C;
+    font-size: 14px;
+    padding: 0;
+    border: none !important;
+}
+
+#social {
+    display: flex;
+    flex-direction: column;
+}
+
+#icon {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+#icon img {
+    width: 28px !important;
+    height: 28px !important;
+    padding: 4px !important;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+}
+
+#icon img:hover {
+    opacity: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+    #cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Background {
+        flex-direction: column;
+    }
+    .login-left {
+        padding: 2.5rem;
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 500px) {
+    #cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+        gap: 8px;
+    }
+}

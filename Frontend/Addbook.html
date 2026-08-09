@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked's - Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div id="home">
+            <a href="home.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/16419/16419837.png" alt="">
+                Booked's
+            </a>
+        </div>
+        <div id="navlinks">
+            <a href="home.html">Home</a>
+            <a href="browsebook.html">Browse Book</a>
+            <a href="auther.html">Authors</a>
+            <a href="genre.html">Genres</a>
+            <a href="Adminpanel.html" class="active">Admin</a>
+        </div>
+    </nav>
+    <!-- ADMIN PAGE -->
+    <main>
+        <section class="admin-heading">
+            <h1>Admin Panel</h1>
+            <p>
+                Manage the books in your library.
+            </p>
+        </section>
+        <!-- ADD BOOK -->
+        <section class="admin-section">
+            <h2>Add Book</h2>
+            <form id="bookForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="title">
+                            Book Name
+                        </label>
+                        <input type="text" id="title" placeholder="Enter book name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">
+                            Author
+                        </label>
+                        <input type="text" id="author" placeholder="Enter author" required >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="genre">
+                            Genre
+                        </label>
+                        <input type="text" id="genre" placeholder="Enter genre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">
+                            Stock Quantity
+                        </label>
+                        <input type="number" id="stock" min="0" placeholder="Enter stock" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cover">
+                        Book Cover URL
+                    </label>
+                    <input type="text" id="cover" placeholder="Paste book cover image URL" >
+                </div>
+                <button type="submit" class="add-button">
+                    Add Book
+                </button>
+            </form>
+        </section>
+        <!-- ALL BOOKS -->
+        <section class="admin-section">
+            <div class="section-title">
+                <h2>All Books</h2>
+                <span id="bookCount">
+                    0 Books
+                </span>
+            </div>
+            <div id="bookList">
+                <!-- Books will appear here -->
+            </div>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>
