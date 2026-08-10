@@ -21,13 +21,15 @@
                 <a href="browsebook.html">Browse Book</a>
                 <a href="auther.html">Authors</a>
                 <a href="genre.html"class="nav-link active">Genres</a>
-                <a href="Adminpanel.html">
+                <a href="Adminpanel.html" id="navAuthLink">
                 <button id="navbutton"> Admin </button></a>
             </div>
         </nav>
     </header>
     <main>
-
+        <div id="genreContent" style="padding: 2rem 2.5rem;">
+            <!-- Genres and their books are loaded dynamically by genre.js -->
+        </div>
     </main>
     <footer>
         <div id="Discover">
@@ -56,5 +58,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="config.js"></script>
+    <script src="navauth.js"></script>
+    <script src="books.js"></script>
+    <script src="genre.js"></script>
 </body>
 </html>

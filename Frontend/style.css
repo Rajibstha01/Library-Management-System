@@ -241,6 +241,141 @@ nav a:hover {
     color: #7a5c1e;
 }
 
+.book-stock {
+    font-size: 0.78rem;
+    color: #6b6b6b;
+    margin-top: 6px;
+    font-family: 'Lora', serif;
+}
+
+.book-stock.out-of-stock {
+    color: #b32c24;
+    font-weight: 600;
+}
+
+/* ── PROFILE PAGE ── */
+.profile-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border: 1px solid #e8e0d0;
+    border-radius: 14px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #F2EDE4;
+    box-shadow: 0 0 0 1px #e0d8cc;
+    margin-bottom: 1rem;
+    padding: 0 !important;
+}
+
+.profile-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #1C1A14;
+    margin-bottom: 0.5rem;
+}
+
+.profile-role-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7a5c1e;
+    background: rgba(201, 168, 76, 0.18);
+    border: 1px solid #C9A84C;
+    border-radius: 20px;
+    padding: 3px 14px;
+    margin-bottom: 1.75rem;
+}
+
+.profile-details {
+    text-align: left;
+    border-top: 1px solid #eee5d5;
+    padding-top: 1.25rem;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+}
+
+.profile-label {
+    color: #888;
+}
+
+.profile-value {
+    color: #1C1A14;
+    font-weight: 600;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 1.25rem;
+    background: #fff;
+    color: #b32c24;
+    border: 1.5px solid #b32c24;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background: #b32c24;
+    color: #fff;
+}
+
+/* ── GENRE PAGE ── */
+.genre-section {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+}
+
+.genre-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #1C1A14;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #C9A84C;
+}
+
+.genre-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .genre-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .genre-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ── ADMIN LOGIN ── */
 .Background {
     display: flex;
@@ -327,6 +462,52 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 0;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.75rem;
+    border-bottom: 1.5px solid #ddd;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1.5px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.auth-tab.active {
+    color: #1C1A14;
+    border-bottom: 2px solid #C9A84C;
+}
+
+.auth-message {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.auth-error {
+    background: rgba(199, 54, 47, 0.1);
+    color: #b32c24;
+    border: 1px solid rgba(199, 54, 47, 0.3);
+}
+
+.auth-success {
+    background: rgba(76, 175, 80, 0.1);
+    color: #2e7d32;
+    border: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 .login-title {
@@ -516,5 +697,210 @@ footer h1 {
         height: auto;
         padding: 10px;
         gap: 8px;
+    }
+}
+
+.author-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+}
+
+.author-filter-bar {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.author-filter-bar label {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.author-select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-family: inherit;
+}
+
+.author-heading {
+    margin-bottom: 1.5rem;
+}
+
+.author-title {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.no-books-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #888;
+    padding: 2rem 0;
+}
+
+.error-books-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #b32c24;
+    padding: 2rem 0;
+}
+/* Append to style.css */
+
+/* Bright Red Stock Warning */
+.low-stock-red {
+    color: #ff0000 !important;
+    font-weight: bold !important;
+}
+
+/* Modal Popup Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-box {
+    background: #fff;
+    width: 90%;
+    max-width: 580px;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-body {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-body img {
+    width: 160px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-details h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.modal-author {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.modal-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1C1A14;
+    margin-top: 4px;
+}
+
+.modal-stock {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.btn-buy, .btn-borrow {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.btn-buy {
+    background: #1C1A14;
+    color: #C9A84C;
+}
+
+.btn-buy:hover {
+    background: #332f25;
+}
+
+.btn-borrow {
+    background: #C9A84C;
+    color: #fff;
+}
+
+.btn-borrow:hover {
+    background: #b08f37;
+}
+
+.modal-message {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-top: 6px;
+}
+
+.modal-error {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.modal-success {
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+@media (max-width: 550px) {
+    .modal-body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-body img {
+        width: 120px;
+        height: 170px;
     }
 }

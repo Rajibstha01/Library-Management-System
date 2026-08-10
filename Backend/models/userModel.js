@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
         enum: ["Admin", "User"],
         default: "User",
     },
+    hasMembership: {
+        type: Boolean,
+        default: false,
+    },
     accountVerified: {
         type: Boolean,
         default: false,
@@ -38,10 +42,9 @@ const userSchema = new mongoose.Schema({
     timestamps: true,
 });
 
-userSchema.pre("save", async function(next) {
-    if (!this.isModified("password")) return next();
+userSchema.pre("save", async function () {
+    if (!this.isModified("password")) return;
     this.password = await bcrypt.hash(this.password, 10);
-    next();
 });
 
 userSchema.methods.comparePassword = async function(enteredPassword) {

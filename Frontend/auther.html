@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Authors — Booked's</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -16,16 +16,37 @@
                 </a>
             </div>
             <div>
-                <input type="text" name="" id="searchbar" placeholder="Search">
+                <input type="text" id="searchbar" placeholder="Search">
                 <a href="home.html">Home</a>
                 <a href="browsebook.html">Browse Book</a>
-                <a href="auther.html"class="nav-link active">Authors</a>
+                <a href="auther.html" class="nav-link active">Authors</a>
                 <a href="genre.html">Genres</a>
-                <a href="Adminpanel.html">
-                <button id="navbutton"> Admin </button></a>
+                <a href="Adminpanel.html" id="navAuthLink">
+                    <button id="navbutton"> Admin </button>
+                </a>
             </div>
         </nav>
     </header>
+
+    <main class="author-container">
+        <div class="author-filter-bar">
+            <label for="authorSelect">Select Author:</label>
+            <select id="authorSelect" class="author-select">
+                <option value="">All Authors (Random Selection)</option>
+            </select>
+        </div>
+
+        <div class="author-heading">
+            <h2 id="authorTitle" class="author-title">Explore Books</h2>
+        </div>
+
+        <div id="cardholder">
+            <div id="cards">
+                <!-- Books dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
     <footer>
         <div id="Discover">
             <h1>Discover</h1>
@@ -45,7 +66,7 @@
         <div id="social">
             <h1> Social Media</h1>
             <br>
-            <div id=icon>
+            <div id="icon">
                 <a href=""><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt=""></a>
                 <a href=""><img src="https://cdn-icons-png.flaticon.com/128/13051/13051733.png" alt=""></a>
                 <a href=""><img src="https://cdn-icons-png.flaticon.com/128/5968/5968830.png" alt=""></a>
@@ -53,5 +74,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="config.js"></script>
+    <script src="navauth.js"></script>
+    <script src="books.js"></script>
+    <script src="author.js"></script>
 </body>
 </html>

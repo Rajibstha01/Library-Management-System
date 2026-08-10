@@ -22,7 +22,7 @@
                 <a href="browsebook.html"class="nav-link active">Browse Book</a>
                 <a href="auther.html">Authors</a>
                 <a href="genre.html">Genres</a>
-                <a href="Adminpanel.html">
+                <a href="Adminpanel.html" id="navAuthLink">
                 <button id="navbutton"> Admin </button></a>
             </div>
         </nav>
@@ -30,107 +30,7 @@
     <main>
         <div id="cardholder">
             <div id="cards">
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://images-us.bookshop.org/ingram/9780147514011.jpg?v=enc-v1" alt="">
-                        <div class="titles">
-                            <p class="book-title">Little Women</p>
-                            <p class="bookauther">Louisa May Alcott</p>
-                            <div class="genre">
-                                <span class="book-genre">Fiction</span>
-                                <span class="book-genre">Romance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://images-us.bookshop.org/ingram/9780345539809.jpg?v=34b960abbc04f5917014df7c88124c44" alt="">
-                        <div class="titles">
-                            <p class="book-title">Red Rising</p>
-                            <p class="bookauther">Pierce Brown</p>
-                            <div class="genre">
-                                <span class="book-genre">Fiction</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9781668236512_p0.jpg?v=1776257763&width=1000&height=1519&crop=center" alt="">
-                        <div class="titles">
-                            <p class="book-title">Theo of Golden</p>
-                            <p class="bookauther">Allen Levi</p>
-                            <div class="genre">
-                                <span class="book-genre">Fiction</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9780593798430_p0.jpg?v=1770270134&width=1000&height=1508&crop=center" alt="">
-                        <div class="titles">
-                            <p class="book-title">The Correspondent</p>
-                            <p class="bookauther">Virginia Evans</p>
-                            <div class="genre">
-                                <span class="book-genre">Fiction</span>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://images-us.bookshop.org/ingram/9780765378484.jpg?v=85de397cb606e522552716809d8525ad" alt="">
-                        <div class="titles">
-                            <p class="book-title">Ender's Game</p>
-                            <p class="bookauther">Orson Scott Card</p>
-                            <div class="genre">
-                                <span class="book-genre">Science Fiction</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9781954118812_p0.jpg?v=1779235212&width=1000&height=1506&crop=center" alt="">
-                        <div class="titles">
-                            <p class="book-title">The Calamity Club</p>
-                            <p class="bookauther"></p>
-                            <div class="genre">
-                                <span class="book-genre">Fiction</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://images-us.bookshop.org/ingram/9780316178310.jpg?v=6830536f83f4bd8fd1cda2379bd755c4" alt="">
-                        <div class="titles">
-                            <p class="book-title">Six Thinking Hats</p>
-                            <p class="bookauther">Edward de Bono</p>
-                            <div class="genre">
-                                <span class="book-genre">Self-help</span>
-                                <span class="book-genre">Psychology</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="coverpage">
-                        <img src="https://images-us.bookshop.org/ingram/9780385480017.jpg?v=cbf67785298a0c86b0289c89805de18d" alt="">
-                        <div class="titles">
-                            <p class="book-title">Bird by Bird</p>
-                            <p class="bookauther">Anne Lamott</p>
-                            <div class="genre">
-                                <span class="book-genre">Self-help</span>
-                                <span class="book-genre">Biography</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+                <!-- Books are loaded dynamically from the backend by books.js -->
             </div>
         </div>
     </main>
@@ -161,5 +61,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="config.js"></script>
+    <script src="navauth.js"></script>
+    <script src="books.js"></script>
 </body>
 </html>

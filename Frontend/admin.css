@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL
-========================= */
+/* NAV & PAGE BASE */
 * {
     margin: 0;
     padding: 0;
@@ -8,178 +6,97 @@
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: #f3eee5;
-    color: #111;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f7f6f2;
+    color: #1C1A14;
 }
-/* =========================
-   NAVIGATION
-========================= */
+
 nav {
-    height: 47px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd7cd;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 35px;
+    padding: 1rem 2rem;
+    background-color: #1C1A14;
 }
-/* LOGO */
+
 #home a {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 0.5rem;
+    color: #f7f6f2;
     text-decoration: none;
-    color: #111;
-    font-size: 17px;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 #home img {
-    width: 27px;
-    height: 27px;
-    object-fit: contain;
-    filter: grayscale(1) brightness(0.25);
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
 }
-/* NAV LINKS */
+
 #navlinks {
     display: flex;
-    align-items: center;
-    gap: 25px;
+    gap: 1.5rem;
 }
+
 #navlinks a {
-    color: #111;
+    color: #a09d96;
     text-decoration: none;
-    font-size: 13px;
-    padding: 9px 0;
-    transition: 0.2s;
+    font-size: 0.95rem;
+    transition: color 0.2s;
 }
 
-#navlinks a:hover {
-    color: #c9972d;
-}
-/* ACTIVE ADMIN */
+#navlinks a:hover,
 #navlinks a.active {
-    border: 1px solid #222;
-    border-radius: 6px;
-    padding: 8px 18px;
-    background-color: #f5f0e8;
-}
-/* =========================
-   MAIN
-========================= */
-main {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 38px 25px 60px;
+    color: #f7f6f2;
 }
 
-/* =========================
-   HEADING
-========================= */
+/* MAIN CONTAINER */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
 
 .admin-heading {
-    text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .admin-heading h1 {
-    font-size: 30px;
-    font-weight: normal;
-    margin-bottom: 8px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1C1A14;
+    margin-bottom: 0.25rem;
 }
 
 .admin-heading p {
-    color: #777066;
-    font-size: 14px;
+    color: #66635b;
+    font-size: 0.95rem;
 }
 
-/* =========================
-   ADMIN SECTION
-========================= */
-
+/* SECTIONS (FORM & LIST) */
 .admin-section {
-    background-color: #fffdf9;
-    border: 1px solid #ded7cb;
+    background: #ffffff;
+    border: 1px solid #e2ded4;
     border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 1.75rem;
+    margin-bottom: 2rem;
 }
-
-/* SECTION TITLE */
 
 .admin-section h2 {
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1C1A14;
+    margin-bottom: 1.25rem;
 }
-
-/* =========================
-   FORM
-========================= */
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 7px;
-}
-
-.form-group input {
-    width: 100%;
-    height: 39px;
-    padding: 0 11px;
-    background-color: #f8f5ef;
-    border: 1px solid #cfc8bd;
-    border-radius: 6px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-    color: #222;
-    outline: none;
-}
-
-.form-group input:focus {
-    border-color: #c69a35;
-    background-color: #fff;
-}
-
-/* =========================
-   ADD BUTTON
-========================= */
-
-.add-button {
-    background-color: #f5f0e8;
-    color: #111;
-    border: 1px solid #222;
-    border-radius: 6px;
-    padding: 8px 18px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.add-button:hover {
-    background-color: #eee8dd;
-}
-
-/* =========================
-   BOOK LIST
-========================= */
 
 .section-title {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 1.25rem;
 }
 
 .section-title h2 {
@@ -187,146 +104,196 @@ main {
 }
 
 #bookCount {
-    color: #8b7a5b;
-    font-size: 13px;
+    font-size: 0.85rem;
+    color: #8c887b;
+    font-weight: 500;
 }
 
-/* BOOK ITEM */
+/* FORM STYLES */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #403e38;
+    margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc7b9;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: #fcfbf9;
+    color: #1C1A14;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1C1A14;
+    background-color: #fff;
+}
+
+/* MULTI-SELECT GENRE CHECKBOX LIST */
+.genre-checkbox-list {
+    max-height: 120px;
+    overflow-y: auto;
+    border: 1px solid #ccc7b9;
+    border-radius: 6px;
+    padding: 0.6rem;
+    background-color: #fcfbf9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.genre-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    color: #1C1A14;
+    cursor: pointer;
+}
+
+.genre-checkbox-item input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #1C1A14;
+}
+
+.no-genres-text {
+    font-size: 0.8rem;
+    color: #8c887b;
+}
+
+.new-input {
+    margin-top: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.add-button {
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #1C1A14;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-button:hover {
+    background-color: #332f25;
+}
+
+/* BOOK LIST ITEMS */
+#bookList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.empty-message {
+    color: #8c887b;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 2rem 0;
+}
 
 .book-item {
-    display: grid;
-    grid-template-columns: 65px 1fr auto;
+    display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 12px 0;
-    border-bottom: 1px solid #e3ddd3;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #eae6dc;
+    border-radius: 6px;
+    background-color: #fcfbf9;
 }
 
-.book-item:last-child {
-    border-bottom: none;
-}
-
-/* BOOK COVER */
 .book-item img {
-    width: 55px;
-    height: 75px;
+    width: 42px;
+    height: 56px;
     object-fit: cover;
     border-radius: 4px;
-    border: 1px solid #ddd5c8;
-    background-color: #eee8de;
 }
 
-/* BOOK INFORMATION */
+.book-cover-placeholder {
+    width: 42px;
+    height: 56px;
+    background-color: #e2ded4;
+    border-radius: 4px;
+}
+
+.book-info {
+    flex: 1;
+}
 
 .book-info h3 {
-    font-size: 16px;
-    font-weight: normal;
-    margin-bottom: 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1C1A14;
+    margin-bottom: 0.15rem;
 }
+
 .book-info p {
-    font-size: 13px;
-    color: #777066;
-    margin-bottom: 4px;
+    font-size: 0.8rem;
+    color: #66635b;
+    margin-bottom: 0.25rem;
 }
 
 .stock {
-    font-size: 12px;
-    color: #777066;
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #2b7a4b;
+    font-weight: 500;
 }
 
-/* LOW STOCK */
-.stock.low {
-    color: #b32c24;
-    font-weight: bold;
+.stock.low-stock-red {
+    color: #ff0000 !important;
+    font-weight: bold !important;
 }
 
-/* =========================
-   ACTION BUTTONS
-========================= */
-
-.book-actions {
-    display: flex;
-    gap: 8px;
-}
-
-/* EDIT */
-
-.edit-button {
-    text-decoration: none;
-    border: 1px solid #c9bca7;
-    background-color: #f7f2e9;
-    color: #5c513e;
-    padding: 7px 13px;
-    border-radius: 5px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.edit-button:hover {
-    background-color: #eee6d8;
-}
-/* DELETE */
 .delete-button {
-    border: 1px solid #c7362f;
-    background-color: #fff;
-    color: #c7362f;
-    padding: 7px 11px;
-    border-radius: 5px;
-    font-size: 16px;
+    background: none;
+    border: none;
+    color: #b04a4a;
+    font-size: 1.1rem;
     cursor: pointer;
-    line-height: 1;
+    padding: 0.4rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .delete-button:hover {
-    background-color: #c7362f;
-    color: white;
+    background-color: #fbebe8;
+    color: #d93838;
 }
 
-/* =========================
-   EMPTY MESSAGE
-========================= */
-
-.empty-message {
-    text-align: center;
-    color: #81786d;
-    font-size: 14px;
-    padding: 25px 0;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-    nav {
-        height: auto;
-        padding: 12px 15px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #navlinks {
-        gap: 14px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    main {
-        padding: 25px 15px;
-    }
-
+@media (max-width: 600px) {
     .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .book-item {
-        grid-template-columns: 55px 1fr;
-    }
-
-    .book-actions {
-        grid-column: 2;
-        margin-top: 5px;
+        flex-direction: column;
+        gap: 0.75rem;
     }
 }

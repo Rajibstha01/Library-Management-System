@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <!-- NAVIGATION -->
     <nav>
         <div id="home">
             <a href="home.html">
@@ -23,70 +22,65 @@
             <a href="Adminpanel.html" class="active">Admin</a>
         </div>
     </nav>
-    <!-- ADMIN PAGE -->
     <main>
         <section class="admin-heading">
             <h1>Admin Panel</h1>
-            <p>
-                Manage the books in your library.
-            </p>
+            <p>Manage the books in your library.</p>
         </section>
-        <!-- ADD BOOK -->
         <section class="admin-section">
             <h2>Add Book</h2>
             <form id="bookForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="title">
-                            Book Name
-                        </label>
+                        <label for="title">Book Name</label>
                         <input type="text" id="title" placeholder="Enter book name" required>
                     </div>
                     <div class="form-group">
-                        <label for="author">
-                            Author
-                        </label>
-                        <input type="text" id="author" placeholder="Enter author" required >
+                        <label for="authorSelect">Author</label>
+                        <select id="authorSelect" required>
+                            <option value="">-- Select Author --</option>
+                            <option value="__new__">+ Add New Author</option>
+                        </select>
+                        <input type="text" id="authorNew" class="new-input hidden" placeholder="Enter new author name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label>Genres (Select multiple or add new)</label>
+                        <div id="genreCheckboxList" class="genre-checkbox-list">
+                            <!-- Populated dynamically with checkboxes -->
+                        </div>
+                        <input type="text" id="genreNew" class="new-input" placeholder="Add custom genres (comma-separated for multiple)">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="genre">
-                            Genre
-                        </label>
-                        <input type="text" id="genre" placeholder="Enter genre" required>
+                        <label for="price">Price ($)</label>
+                        <input type="number" id="price" min="0" step="0.01" placeholder="Enter price (e.g. 19.99)" required>
                     </div>
                     <div class="form-group">
-                        <label for="stock">
-                            Stock Quantity
-                        </label>
-                        <input type="number" id="stock" min="0" placeholder="Enter stock" required >
+                        <label for="stock">Stock Quantity</label>
+                        <input type="number" id="stock" min="0" placeholder="Enter stock" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="cover">
-                        Book Cover URL
-                    </label>
-                    <input type="text" id="cover" placeholder="Paste book cover image URL" >
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="cover">Book Cover URL</label>
+                        <input type="text" id="cover" placeholder="Paste book cover image URL">
+                    </div>
                 </div>
-                <button type="submit" class="add-button">
-                    Add Book
-                </button>
+                <button type="submit" class="add-button">Add Book</button>
             </form>
         </section>
-        <!-- ALL BOOKS -->
         <section class="admin-section">
             <div class="section-title">
                 <h2>All Books</h2>
-                <span id="bookCount">
-                    0 Books
-                </span>
+                <span id="bookCount">0 Books</span>
             </div>
-            <div id="bookList">
-                <!-- Books will appear here -->
-            </div>
+            <div id="bookList"></div>
         </section>
     </main>
+    <script src="config.js"></script>
     <script src="admin.js"></script>
 </body>
 </html>
