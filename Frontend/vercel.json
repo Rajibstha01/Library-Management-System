@@ -1,15 +1,9 @@
 {
     "version": 2,
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "rewrites": [
-        { "source": "/", "destination": "/index.html" },
-        { "source": "/browsebook", "destination": "/browsebook.html" },
-        { "source": "/authors", "destination": "/auther.html" },
-        { "source": "/genres", "destination": "/genre.html" },
-        { "source": "/admin", "destination": "/Adminpanel.html" },
-        { "source": "/profile", "destination": "/profile.html" },
-        { "source": "/addbook", "destination": "/Addbook.html" },
-        { "source": "/books", "destination": "/Books.js" }
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
     ]
 }
