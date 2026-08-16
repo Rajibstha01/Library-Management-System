@@ -12,7 +12,10 @@ import userRouter from "./routes/userRoutes.js";
 config({ path: "./config/config.env" });
 export const app = express();
 app.use(cors({
-    origin: "https://library-management-system-eta-livid.vercel.app",
+    origin: [
+        "https://library-management-system-three-ebon.vercel.app",
+        "https://library-management-system-eta-livid.vercel.app"
+    ],
     credentials: true,
 }));
 
