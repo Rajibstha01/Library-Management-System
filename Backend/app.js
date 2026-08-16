@@ -11,13 +11,10 @@ import userRouter from "./routes/userRoutes.js";
 
 config({ path: "./config/config.env" });
 export const app = express();
-app.use(
-    cors({
-        origin: [process.env.FRONTEND_URL],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true,
-    })
-);
+app.use(cors({
+    origin: "https://library-management-system-eta-livid.vercel.app",
+    credentials: true,
+}));
 
 app.use(cookieParser());
 app.use(express.json());
