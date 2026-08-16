@@ -1,6 +1,6 @@
 import { catchAsyncErrors } from "../middlewares/catchAsyncError.js";
 import ErrorHandler from "../middlewares/errorMiddlewares.js";
-import { Book } from "../models/bookmodel.js";
+import { Book } from "../models/bookmModel.js";
 
 // Downloads an image from a URL and converts it into a Base64 Data URI string
 async function downloadAndConvertToBase64(imageUrl) {
