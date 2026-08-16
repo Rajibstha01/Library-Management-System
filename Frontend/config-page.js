@@ -1,1 +1,1 @@
-window.API_BASE = "http://localhost:4000/api/v1";
+const API_URL = "https://library-management-system-7ne7.onrender.com";
